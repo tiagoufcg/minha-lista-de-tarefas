@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Tarefa from './components/Tarefa';
 
@@ -35,7 +34,7 @@ function App() {
 
   return (
     <div className='App'>
-      <header className='App-Header'>
+      <header className='App-header'>
         <h1>Minha Lista de Tarefas</h1>
         <form onSubmit={adicionarTarefa}>
           <input
@@ -46,7 +45,7 @@ function App() {
           />
           <button type="submit">Adicionar</button>
         </form>
-        <div className='Lista-tarefas'>
+        <div className='lista-tarefas'>
           {tarefas.map((tarefa, index) => (
             <Tarefa key={index} tarefa={tarefa} onRemoverTarefa={removerTarefa} />
           ))}
